@@ -15,7 +15,8 @@ void loop()
 
     String dataRx = Serial.readStringUntil('\n');
     if (dataRx == "r") {
-      Serial.println(digitalRead(SENSOR));
+      Serial.print(digitalRead(SENSOR));
+      Serial.print('\n');
     }
     else if (dataRx == "1") {
       digitalWrite(ACTUATOR, 1);

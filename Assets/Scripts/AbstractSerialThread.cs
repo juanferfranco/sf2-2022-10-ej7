@@ -195,6 +195,8 @@ public abstract class AbstractSerialThread
         serialPort.WriteTimeout = writeTimeout;
         //serialPort.DtrEnable = true;
         // serialPort.RtsEnable = true;
+        serialPort.NewLine = "\n";
+
         serialPort.Open();
 
         if (enqueueStatusMessages)
